@@ -1,7 +1,33 @@
+* {
+  font-family: 'Lobster', cursive;
+}
 .container {
   width: 70%;
   margin: auto;
   text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.divImage1 {
+  border: 2px dashed #4ecca3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.divImage2 {
+  border: 2px dashed #4ecca3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15px;
 }
 
 .dice {
@@ -25,6 +51,7 @@ p {
   font-size: 2rem;
   color: #4ecca3;
   font-family: 'Indie Flower', cursive;
+  margin: 0;
 }
 
 img {
@@ -52,18 +79,98 @@ img {
 }
 
 footer {
-  margin-top: 5%;
+  margin-top: 1%;
   color: #eeeeee;
   text-align: center;
   font-family: 'Indie Flower', cursive;
+}
+
+#player1Name {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+#divSetPlayer1Name {
+  width: 250px;
+  margin: 10px;
+}
+#p1nameInput {
+  width: 150px;
+  height: 30px;
+}
+#divSetPlayer1Name > button {
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4ecca3;
+  color: white;
+}
+
+#divSetPlayer2Name {
+  width: 250px;
+  margin: 10px;
+}
+#p2nameInput {
+  display: inline;
+  width: 150px;
+  height: 30px;
+}
+
+#divSetPlayer2Name > button {
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4ecca3;
+  color: white;
+}
+#player2Name {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.divImage1 > img {
+  border-radius: 10px;
+  /* box-shadow: 5px 5px 10px #4ecca3; */
+}
+
+.divImage2 > img {
+  border-radius: 10px;
+  /* box-shadow: 5px 5px 10px #4ecca3; */
+}
+
+.animateElement {
+  background-color: #4ecca3;
+  animation: moveAnimation 2s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes moveAnimation {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  20%,
+  60%,
+  100% {
+    transform: rotate(10deg);
+  }
+  40%,
+  80% {
+    transform: rotate(-10deg);
+  }
 }
 
 /* Media Query for iPhone 14 Pro */
 @media (max-width: 400px) {
   .container {
     width: 90%; /* Adjust as needed for smaller screens */
-    
   }
+
+  /* .content {
+    display: inline-block;
+  } */
 
   h1 {
     font-size: 2rem; /* Adjust font size for smaller screens */
